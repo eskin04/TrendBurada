@@ -1,11 +1,18 @@
+<div class="container text-end mb-5 ">
+  <button class="btn btn-secondary me-3" (click)='sortMax()'>Pahalıdan Ucuza</button>
+  <button class="btn btn-secondary me-5 " (click)='sortMin()'>Ucuzdan Pahalıya</button>
+</div>
+
 <div class="container d-flex flex-wrap justify-content-around">
+
   <div class="card w-25 me-2 mb-3 rounded-3 shadow" *ngFor="let item of selectedCategory">
-    <a href=""><img src="../../assets/product_img/{{item.image}}" class="card-img-top rounded-top w-100"></a>
+    <a [routerLink]='[item.id]'><img src="../../assets/product_img/{{item.image}}"
+        class="card-img-top rounded-top w-100"></a>
     <div class="card-footer">
       <h3 class="card-title">{{item.name}}</h3>
       <div class="card-text">
 
-        <a *ngFor="let star of getStars(item.stars);" class="text-decoration-none mb-2">
+        <a *ngFor="let star of getStars(item.stars);" class="text-decoration-none mb-2 text-warning">
           <i class={{star}}></i>
         </a>
         <p class="box rounded-3 text-white text-center mt-2 p-1 fw-bolder fs-5" style="background-color: #FF8B39;">

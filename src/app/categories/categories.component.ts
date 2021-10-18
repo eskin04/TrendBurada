@@ -15,7 +15,10 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategories();
+    
   }
+
+  
 
   getCategories(){
     let route:string;
@@ -32,6 +35,16 @@ export class CategoriesComponent implements OnInit {
       this.starsList.push('fas fa-star')
     }
     return this.starsList;
+    
+  }
+
+  sortMax(){
+    this.selectedCategory.sort(function(a:any,b:any){return b.price-a.price})
+
+  }
+
+  sortMin(){
+    this.selectedCategory.sort((a:any,b:any)=>{return a.price-b.price})
     
   }
 
