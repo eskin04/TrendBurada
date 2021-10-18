@@ -22,16 +22,14 @@
     </div>
   </div>
 </nav>
-
-
 <div class="container">
   <div class="d-flex justify-content-around mt-2">
-    <a href="" class="text-decoration-none fs-6 text-dark fw-bold">Telefon</a>
-    <a href="" class="text-decoration-none fs-6 text-dark fw-bold">Bilgisayar</a>
-    <a href="" class="text-decoration-none fs-6 text-dark fw-bold">Giyim</a>
-    <a href="" class="text-decoration-none fs-6 text-dark fw-bold">Kozmetik</a>
-    <a href="" class="text-decoration-none fs-6 text-dark fw-bold">Aksesuar</a>
-    <a href="" class="text-decoration-none fs-6 text-dark fw-bold">Ayakkabı</a>
+    <a [routerLink]='["/Telefon"]' class="text-decoration-none fs-6 text-dark fw-bold">Telefon</a>
+    <a [routerLink]='["/Bilgisayar"]' class="text-decoration-none fs-6 text-dark fw-bold">Bilgisayar</a>
+    <a [routerLink]='["/Giyim"]' class="text-decoration-none fs-6 text-dark fw-bold">Giyim</a>
+    <a [routerLink]='["/Kozmetik"]' class="text-decoration-none fs-6 text-dark fw-bold">Kozmetik</a>
+    <a [routerLink]='["/Aksesuar"]' class="text-decoration-none fs-6 text-dark fw-bold">Aksesuar</a>
+    <a [routerLink]='["/Ayakkabı"]' class="text-decoration-none fs-6 text-dark fw-bold">Ayakkabı</a>
   </div>
 </div>
 
@@ -40,7 +38,7 @@
     <div class="col-md-3">
       <app-ad></app-ad>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 ">
       <router-outlet></router-outlet>
     </div>
   </div>
