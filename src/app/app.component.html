@@ -1,14 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand ms-2 text-danger fs-3" href="#">TrendBurada</a>
-    <form class="d-flex w-50 ms-5">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <div class="d-flex w-50 ms-5">
+      <input class="form-control me-2" placeholder="Ürün ara..." (keyup.enter)='getSearch(search.value);search.value=""'
+        #search>
+      <button class="btn btn-outline-success" (click)='getSearch(search.value)'>Search</button>
+    </div>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-3 ms-auto mb-2 mb-lg-0">
         <li class="nav-item me-3">
-          <a href="" class="nav-link ">Sepetim</a>
+          <a routerLinkActive='active' [routerLinkActiveOptions]='{exact: true}' routerLink='/'
+            class="nav-link fw-bolder fs-6"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item me-3">
+          <a routerLinkActive='active' routerLink='/sepet' class="nav-link fw-bolder fs-6"><i
+              class="fas fa-shopping-basket"></i>Sepetim</a>
         </li>
         <li class="nav-item me-2">
           <button class="btn btn-primary">Giriş Yap</button>
@@ -24,12 +30,12 @@
 </nav>
 <div class="container">
   <div class="d-flex justify-content-around mt-2">
-    <a [routerLink]='["/Telefon"]' class="text-decoration-none fs-6 text-dark fw-bold">Telefon</a>
-    <a [routerLink]='["/Bilgisayar"]' class="text-decoration-none fs-6 text-dark fw-bold">Bilgisayar</a>
-    <a [routerLink]='["/Giyim"]' class="text-decoration-none fs-6 text-dark fw-bold">Giyim</a>
-    <a [routerLink]='["/Kozmetik"]' class="text-decoration-none fs-6 text-dark fw-bold">Kozmetik</a>
-    <a [routerLink]='["/Aksesuar"]' class="text-decoration-none fs-6 text-dark fw-bold">Aksesuar</a>
-    <a [routerLink]='["/Ayakkabı"]' class="text-decoration-none fs-6 text-dark fw-bold">Ayakkabı</a>
+    <a [routerLink]='["category","Telefon"]' class="text-decoration-none fs-6 text-dark fw-bold">Telefon</a>
+    <a [routerLink]='["category","Bilgisayar"]' class="text-decoration-none fs-6 text-dark fw-bold">Bilgisayar</a>
+    <a [routerLink]='["category","Giyim"]' class="text-decoration-none fs-6 text-dark fw-bold">Giyim</a>
+    <a [routerLink]='["category","Kozmetik"]' class="text-decoration-none fs-6 text-dark fw-bold">Kozmetik</a>
+    <a [routerLink]='["category","Aksesuar"]' class="text-decoration-none fs-6 text-dark fw-bold">Aksesuar</a>
+    <a [routerLink]='["category","Ayakkabı"]' class="text-decoration-none fs-6 text-dark fw-bold">Ayakkabı</a>
   </div>
 </div>
 
