@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-3 ms-auto mb-2 mb-lg-0">
         <li class="nav-item me-3">
-          <a routerLinkActive='active' [routerLinkActiveOptions]='{exact: true}' routerLink='/'
+          <a routerLinkActive='active' [routerLinkActiveOptions]='{exact: true}' routerLink='/home'
             class="nav-link fw-bolder fs-6"><i class="fas fa-home"></i>Home</a>
         </li>
         <li class="nav-item me-3">
@@ -17,39 +17,22 @@
               class="fas fa-shopping-basket"></i>Sepetim</a>
         </li>
         <li class="nav-item me-2">
-          <button class="btn btn-primary">Giriş Yap</button>
+          <button [routerLink]='["log","login"]' class="btn btn-primary">Giriş Yap</button>
         </li>
 
         <li class="nav-item me-2">
-          <button class="btn btn-danger">Üye Ol</button>
+          <button [routerLink]="['log','sign_up']" class="btn btn-danger">Üye Ol</button>
         </li>
       </ul>
 
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="d-flex justify-content-around mt-2">
-    <a [routerLink]='["category","Telefon"]' class="text-decoration-none fs-6 text-dark fw-bold">Telefon</a>
-    <a [routerLink]='["category","Bilgisayar"]' class="text-decoration-none fs-6 text-dark fw-bold">Bilgisayar</a>
-    <a [routerLink]='["category","Giyim"]' class="text-decoration-none fs-6 text-dark fw-bold">Giyim</a>
-    <a [routerLink]='["category","Kozmetik"]' class="text-decoration-none fs-6 text-dark fw-bold">Kozmetik</a>
-    <a [routerLink]='["category","Aksesuar"]' class="text-decoration-none fs-6 text-dark fw-bold">Aksesuar</a>
-    <a [routerLink]='["category","Ayakkabı"]' class="text-decoration-none fs-6 text-dark fw-bold">Ayakkabı</a>
-  </div>
-</div>
 
-<div class="container-fluid mt-5 ms-3">
-  <div class="row">
-    <div class="col-md-3">
-      <app-ad></app-ad>
-    </div>
-    <div class="col-md-9 ">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
 
-<footer class="footer bg-dark mt-3 text-center text-white fw-bolder pt-4" style="height: 100px;">
+
+<footer class="footer mb-0 bg-dark text-center text-white fw-bolder pt-4 "
+  style=" position:absolute; bottom:-150px; right:0px; left:0;  height:100px;">
   ©2021 DSM Grup Danışmanlık İletişim ve Satış Tic.A.Ş.-Her Hakkı Saklıdır.
 </footer>

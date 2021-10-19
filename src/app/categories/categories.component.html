@@ -1,6 +1,7 @@
-<div class="container text-end mb-5 ">
-  <button class="btn btn-secondary me-3" (click)='sortMax()'>Pahalıdan Ucuza</button>
-  <button class="btn btn-secondary me-5 " (click)='sortMin()'>Ucuzdan Pahalıya</button>
+<div class="container d-flex justify-content-end mb-5 ">
+  <h2 class=" me-auto d-inline-block fw-bolder text-uppercase ms-4 fs-1">{{selectedName}}</h2>
+  <button class="btn btn-secondary me-3 align-self-start" (click)='sortMax()'>Pahalıdan Ucuza</button>
+  <button class="btn btn-secondary me-5 align-self-start" (click)='sortMin()'>Ucuzdan Pahalıya</button>
 </div>
 
 <div class="container d-flex flex-wrap justify-content-around">

@@ -3,7 +3,7 @@ import { Product } from "./product";
 export class ProductList{
     productList:Product[]=[
         {id:1,name:'Dell',price:3000,stars:'4',category:'Bilgisayar',image:'1.jpg'},
-        {id:2,name:'Asus',price:5000,stars:'3',category:'Bilgisayar',image:'2.jpg'},
+        {id:2,name:'Nike',price:1000,stars:'3',category:'Ayakkabı',image:'14.jpg'},
         {id:3,name:'Xiaomi Redmi 5',price:1000,stars:'3',category:'Telefon',image:'3.jpg'},
         {id:4,name:'Apple Watch',price:3500,stars:'5',category:'Aksesuar',image:'4.jpg'},
         {id:5,name:'Tişört',price:30,stars:'4',category:'Giyim',image:'5.jpg'},

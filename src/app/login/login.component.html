@@ -1,0 +1,50 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <div *ngIf="result"
+    class="card text-center pt-1 rounded-3 shadow border-top-0 border-bottom-0 border-4 border-success">
+
+    <h2 class="card-title fw-bolder mb-5 fs-1">Giriş Yap</h2>
+    <div class="alert alert-danger" *ngIf="message">{{message}}</div>
+    <div class="card-body">
+      <div class="form-group w-75 px-2 m-auto">
+        <input type="text" class="form-control my-3" placeholder="Kullanıcı Adı" #name
+          (keyup.enter)='getSistem(name.value,password.value);name.value="";password.value=""'>
+      </div>
+      <div class="input-group w-75 px-2 m-auto my-3" id="input">
+        <input id="inp" type="password" class="form-control " placeholder="Şifre" #password
+          (keyup.enter)='getSistem(name.value,password.value);name.value="";password.value=""' aria-describedby='i'>
+
+        <i [ngClass]='getClasses(password)' (click)='clicked(password)' id="i"></i>
+      </div>
+
+      <div class="form-group text-end my-4 me-4">
+        <button class="btn btn-primary"
+          (click)='getSistem(name.value,password.value);name.value="";password.value=""'>Giriş</button>
+      </div>
+      <div class="card-footer ">
+        <p class="card-text">Hesabın Yok mu hemen üye ol</p>
+        <button [routerLink]='["/sign_up"]' class="btn btn-danger">Üye Ol</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!result"
+    class="card text-center pt-1 rounded-3 shadow border-top-0 border-bottom-0 border-4 border-success">
+
+    <h2 class="card-title fw-bolder mb-5 fs-1">Üye Ol</h2>
+    <div class="card-body">
+      <div class="form-group w-75 px-2 m-auto">
+        <input type="text" class="form-control my-3" placeholder="Kullanıcı Adı">
+      </div>
+      <div class="form-group w-75 px-2 m-auto">
+        <input type="password" class="form-control my-3" placeholder="Şifre">
+      </div>
+      <div class="form-group w-75 px-2 m-auto">
+        <input type="password" class="form-control my-3" placeholder="Şifre Tekrar">
+      </div>
+      <div class="form-group text-end my-4 me-4">
+        <button class="btn btn-primary">Üye Ol</button>
+      </div>
+
+    </div>
+  </div>
+</div>

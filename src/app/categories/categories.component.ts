@@ -10,12 +10,13 @@ import { ProductList } from '../products/productList';
 export class CategoriesComponent implements OnInit {
   products=new ProductList();
   selectedCategory:any=[]
+  selectedName!:string;
   starsList:any=[]
   constructor(private router:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getCategories();
-    
+    this.getProduct();
   }
 
   
@@ -27,6 +28,13 @@ export class CategoriesComponent implements OnInit {
       this.selectedCategory=this.products.productList.filter(i=>i.category===route)
 
     })
+  }
+
+  getProduct(){
+    this.router.paramMap.subscribe(params=>{
+      this.selectedName=params.get('name')!;
+    })
+  
   }
 
   getStars(stars:string){

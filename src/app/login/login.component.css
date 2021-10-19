@@ -1,0 +1,17 @@
+#i {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 2;
+}
+
+#input{
+    display: relative;
+}
+
+#inp{
+    z-index: 1;
+}
